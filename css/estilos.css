@@ -70,7 +70,10 @@ html body, html .menu-item a{
 }
 input{
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+}
+.form-control{
+    border-radius: 1px;
 }
 *{
     margin: 0 auto;
@@ -83,9 +86,16 @@ body h1, body h2, body h3, body h4, body h5, body h6{
     color: #3f3f3f;
     font-size: 32px;
 }
+.negrito-e-italico{
+    font-weight: bold;
+    font-style: italic;
+}
+.form-rodape{
+
+}
 .btn.btn-primary{
-    background: #e60606;
-    border-color: #e60606;
+    background: #c42626;
+    border-color: #c42626;
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
@@ -95,14 +105,14 @@ body h1, body h2, body h3, body h4, body h5, body h6{
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
 {
-    background: #e60606;
-    border-color: #e60606;
+    background: #c42626;
+    border-color: #c42626;
     color: #fff;
 }
 .btn.btn-primary:hover{
     background: #ffffff;
-    border-color: #e60606;
-    color: #e60606;
+    border-color: #c42626;
+    color: #c42626;
     font-weight: 900;
 }
 .btn-timeline{
@@ -161,10 +171,13 @@ section.parallax::before{content: ""; display: block; position: absolute; min-wi
     background: transparent;
 }
 #como-funciona{
-    padding: 50px 0 70px 0;
+    padding: 50px 0 20px 0;
 }
-#formacao, #plans{
-    padding: 20px 0 70px 0;
+#formacao{
+    padding: 20px 0 40px 0;
+}
+#plans{
+    padding: 0px 0 20px 0;
 }
 #quem-sou{
     padding: 20px 0 0 0;
@@ -383,26 +396,42 @@ i{
     padding: 15px 0;
     float: right !important;
 }
-.banner{
+/* .banner{
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background: #fff;
     padding: 0px;
     margin: 0px auto;
     overflow: visible;
     height: 750px;
-}
-.banner h1{
-    font-size: 4rem;
-    font-weight: 900;
-}
-.img-right{
-    text-align: right;
-}
-.img-anderson{
-    padding: 0;
-    float: left;
-}
+} */
+.banner{
+    display: flex;
+    align-items: center;
+    background: url('../img/novas/capa-site.png');
+    background-size: cover;
+    background-position: top right;
+    padding: 0px;
+    margin: 0px auto;
+    overflow: visible;
+    height: 750px;
+    }
+    .banner h1{
+        font-size: 3.6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        background: #fff;
+        padding: 10px;
+        line-height: 50px;
+        padding-left: 50px;
+        padding-right: 60px;
+    }
+    .img-right{
+    display: none;
+    }
+    .img-anderson{
+      display: none;
+    }
 .content-quem-sou-eu{
     display: flex;
     flex-direction: row;
@@ -414,16 +443,19 @@ i{
     padding-left: 3em;
 }
 .title-banner{
-    align-self: flex-end;
-    bottom: 12em;
-    left: 4em;
+    /* align-self: flex-end; */
+    bottom: 0;
+    left: 0;
+    top: 3em;
+    margin-left: 0;
+
 }
 .title-cta{
     font-size: 2.5em;
     font-weight: 600;
 }
 #counter{
-    margin: -85px 0px 0px 0px;
+    margin: -35px 0px 0px 0px;
 }
 .contador{
     position: relative;
@@ -464,7 +496,7 @@ i{
     text-align: left;
     line-height: 1.1;
     padding-left: 0;
-    width: ;
+    /* width: ; */
 }
 .number-right{
     text-align: right;
@@ -493,6 +525,9 @@ i{
 }
 .sh-section-container{
     padding: 90px 0;
+}
+#depoimentos{
+    margin: 90px 0 20px;
 }
 #quem-sou-eu{
     margin: 0px 0;
@@ -604,7 +639,7 @@ i{
     margin: 0 auto;
 }
 .icon-contact i{
-    color: #e60606;
+    color: #c42626;
     font-size: 40px;
     transition: all .3s ease-in-out;
     padding: 5px 0;
@@ -716,7 +751,7 @@ i{
 }
 
 .button-plan .btn{
-    background-color: #e60606;
+    background-color: #c42626;
     color: #fff;
     font-weight: 600;
     font-size: 17px;
@@ -1013,7 +1048,8 @@ footer{
 }
 
 .div-video p{
-    color: #e60606;
+    color: #fff;
+    /* padding-top: 10px; */
     padding-left: 10px;
     font-size: 1.6em;
     font-weight: 800;
@@ -1312,4 +1348,15 @@ body {
   
   .direction-r .desc {
     margin: 1em 0 0 0.75em;
+  }
+
+  .form-rodape .form-control::-webkit-input-placeholder{
+    font-size: 14px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: rgb(184, 184, 184);
+  }
+  .form-rodape .form-control::-moz-placeholder {
+    font-size: 14px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: rgb(184, 184, 184);
   }
