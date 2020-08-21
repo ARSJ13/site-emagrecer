@@ -133,6 +133,10 @@ section.parallax, section.parado{height: auto;}
 
 section.parado{background-attachment: fixed;}
 
+@media screen and (max-width: 767px){
+    section.parado{background-attachment: scroll;}
+}
+
 section.dark{background-color: #7294A1;}
 section.dark *{color: #FFF;}
 
@@ -774,9 +778,11 @@ footer{
 .sh-footer .sh-footer-widgets{
     background-color: #545454;
     color: #e3e3e3;
+    display: flex;
 }
 .sh-footer-widgets{
-    padding: 100px 0;
+    margin-top: 20px;
+    padding:10px;
 }
 .sh-footer .sh-footer-widgets h3{
     color: #ffff;
