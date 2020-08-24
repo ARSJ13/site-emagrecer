@@ -11,7 +11,6 @@
   .card{width: 100%;}
   .title-cta{font-size: 2.8em;}
   .div-video{
-      /* padding-top: 1em; */
   }
   .div-video i{padding: 6px 14px;}
   .div-video p{width: 200px;font-size: 1.2em;}
@@ -21,7 +20,6 @@
       left: 0;
   }
   .sh-header{top: 0px;}
-  /* .img-como-funciona{width: 100%;} */
   .counter-number, .counter-description{text-align: center;padding-left: 0;padding-right: 0;}
   .counter-description{width: 100%;}
   .box-counter > .row{border-left: none;}
@@ -245,9 +243,7 @@
       width: 20px;
       height: 20px;
       margin-left: -9px;
-      /* background: #fff; */
       border-radius: 10px;
-      /* border: 4px solid rgb(255,80,80); */
       z-index: 10;
   }
   .direction-r .flag:before {
@@ -316,10 +312,6 @@
     display: flex; 
     flex-direction: column;
     height: 70px;
-  }
-
-  #quem-sou .row{
-      /* flex-direction: column-reverse;  */
   }
   .ajustesPlanos{
     margin-bottom: 50px;
