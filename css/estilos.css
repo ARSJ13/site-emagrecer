@@ -1323,3 +1323,10 @@ body {
     font-family: 'Roboto', 'Arial', sans-serif;
     color: rgb(184, 184, 184);
   }
+
+  .scrollToTop{   
+    position:fixed;
+    top:90%; 
+    right:40px;
+    display:none;
+}

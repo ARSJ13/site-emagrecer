@@ -19,7 +19,7 @@
 <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=LwtCWAq0On74dbdXQWs52vbdEeJNpLPAb9rcZ_rONrmLfK0h5z5Kk1777c_6PcHgOAgRIeAeFY-u-Nvw7A061AnC0awocLS3jwGt16G6rYWqaTeajtyrEg4sU00Mhm0mHM69d0FrkgSnP7oWloLR-LeqQSwFMZFOqcBy7Peb5P4" charset="UTF-8"></script></head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <main>
         <div id="page-container">    
@@ -87,21 +87,21 @@
                                             <div class="modal-body" style="background: #fff;">
                                                 <div class="col-md-10 col-sm-12">
                                                     <h5 class="" style="font-size: 22px;">Deixe sua Mensagem</h5>
-                                                    <form class="form-rodape">
+                                                    <form class="form-rodape" action="mail/contatoemail.php" method="post">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Seu nome">
+                                                            <input type="text" name="txtNome" class="form-control" id="txtNome" placeholder="Seu nome">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Seu telefone/WhatsApp com DDD">
+                                                            <input type="tel" name="txtTelefone" class="form-control"id="txtTelefone" placeholder="Seu telefone/WhatsApp com DDD">
                                                             </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Seu e-mail">
+                                                            <input type="email" name="txtEmail" class="form-control" id="txtEmail" placeholder="Seu e-mail">
                                                         </div>
                                                         <div class="form-group">
-                                                            <textarea class="form-control" placeholder="Sua mensagem" rows="3"></textarea>
+                                                            <textarea class="form-control" name="txtMensagem" id="txtMensagem" placeholder="Sua mensagem" rows="3"></textarea>
                                                         </div>
                                                         <div class="text-left">
-                                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                                            <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -1051,8 +1051,8 @@
         </div>
     </footer>
 
-    <div class="sh-back-to-top sh-back-to-top3 active">
-        <a onclick="scrollTopAnimated()">
+    <div class="scrollToTop sh-back-to-top sh-back-to-top3 active">
+        <a>
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
@@ -1121,11 +1121,22 @@
     const titulo = document.querySelector('.titulo-principal');
     typeWrite(titulo);
 
-    function scrollTopAnimated() { 
-    $(".sh-back-to-top3").css("opacity", "1"); 
-    $("html, body").animate( 
-        { scrollTop: "0" }, 1000); 
-    }
+    $(document).ready(function(){
+    
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 1000) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+        });
+
+        $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+        });
+    });
+
     </script>
     
 </body>
