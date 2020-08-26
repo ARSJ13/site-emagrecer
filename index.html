@@ -87,21 +87,21 @@
                                             <div class="modal-body" style="background: #fff;">
                                                 <div class="col-md-10 col-sm-12">
                                                     <h5 class="" style="font-size: 22px;">Deixe sua Mensagem</h5>
-                                                    <form class="form-rodape" action="mail/contatoemail.php" method="post">
+                                                    <form class="form-rodape" action="./email.php" method="POST">
                                                         <div class="form-group">
-                                                            <input type="text" name="txtNome" class="form-control" id="txtNome" placeholder="Seu nome">
+                                                            <input type="text" name="nome" class="form-control" placeholder="Seu nome">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="tel" name="txtTelefone" class="form-control"id="txtTelefone" placeholder="Seu telefone/WhatsApp com DDD">
+                                                            <input type="tel" name="telefone" class="form-control" placeholder="Seu telefone/WhatsApp com DDD">
                                                             </div>
                                                         <div class="form-group">
-                                                            <input type="email" name="txtEmail" class="form-control" id="txtEmail" placeholder="Seu e-mail">
+                                                            <input type="email" name="email" class="form-control" placeholder="Seu e-mail">
                                                         </div>
                                                         <div class="form-group">
-                                                            <textarea class="form-control" name="txtMensagem" id="txtMensagem" placeholder="Sua mensagem" rows="3"></textarea>
+                                                            <textarea class="form-control" name="mensagem" placeholder="Sua mensagem" rows="3"></textarea>
                                                         </div>
                                                         <div class="text-left">
-                                                            <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
+                                                            <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
                                                         </div>
                                                     </form>
                                                 </div>
